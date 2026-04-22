@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+
+
+<head>
+    <title>Resume Layout</title>
+
+
+
+
+    <style>
+        #header {
+            height: 125px;
+            background-color: #e1e1ec;
+            margin-bottom: 30px;
+            padding: 10px, 20px;
+            text-align: center;
+        }
+
+
+
+
+        #header h2 {
+            margin: 30px;
+        }
+
+
+        #header ul {
+            list-style-type: none;
+            /* removes bullets */
+            margin: 10px 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+
+
+
+        #header ul li {
+            background: #ffffff;
+            font-size: 12px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+
+
+
+        #header ul li:hover {
+            background: #cfd3e6;
+        }
+        #dropcard {
+        width: 300px;
+        margin: 50px auto;
+        padding: 20px;
+        outline: 2px solid black;        
+        text-align: center;
+        border-radius: 9%;
+        }
+        #footer {
+            clear: both;
+            background-color: #e1e1ec;
+            margin-top: 10px;
+            padding: 10px;
+            padding: 10;
+        }
+        #circleit {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        border-radius: 50%;
+        justify-content: center;
+        margin: 0 auto;
+        }
+       
+        #squareit {
+        width: 70px;
+        height: 70px;
+        background-color: lightgreen;
+        margin: 10px;
+        }
+
+
+        #assocl{
+            width: fit-content;
+            display: flex;
+            text-align: left;
+            border-radius: 10%;
+            margin: 10px;
+            padding: 10px;
+            background-color: lightblue;
+
+
+        }
+        #assocr{
+            float: right;
+            display: flex;
+            width: fit-content;
+            justify-content: flex-end;
+            text-align: right;
+            border-radius: 10%;
+            margin: 10px;
+            padding: 10px;
+            background-color: lightblue;
+        }
+           
+
+
+        #footer h2 {
+            text-align: center;
+            clear: both;
+            padding: 0;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+
+
+
+
+    <!-- HEADER -->
+    <div id="header">
+        <h2>Radius Ministries</h2>
+        <hr>
+        <ul>
+            <li>Home</li>
+            <li>Radius</li>
+            <li>Testimonies</li>
+            <li>Missions</li>
+            <li>Gallery</li>
+            <li>fundraising</li>
+            <li>Prayer</li>
+            <li>To Do</li>
+        </ul>
+    </div>
+
+
+    <div id = "dropcard">
+            <div class="toggle-box">
+            <h3 onclick="togglemText()"> Here is my mission card</h3>
+            <p id="hiddenmText">This is the Mission text.</p>
+        </div>
+    </div>
+
+
+    <div id="dropcard">
+        <div class="toggle-box">
+            <h3 onclick="togglesText()"> Here is my story card</h3>
+            <p id="hiddensText">This is the story text.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div id="assocl">
+        <div id="squareit"></div>
+        <p>some text to describe associate<br> some more text<br> and some more</p>
+       
+    </div>
+    <div id="assocr">
+        <p>some text to describe associate<br> some more text<br> and some more</p>
+        <div id="squareit"></div>
+   
+    </div>
+
+
+
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <div id="circleit"></div>
+    </div>
+
+
+    <script>
+        function togglemText() {
+          const mtext = document.getElementById("hiddenmText");
+   
+          if (mtext.style.display === "none") {
+            mtext.style.display = "block";
+          } else {
+            mtext.style.display = "none";
+          }
+        }
+
+
+        function togglesText() {
+        const stext = document.getElementById("hiddensText");
+       
+        if (stext.style.display === "none") {
+            stext.style.display = "block";
+        } else {
+            stext.style.display = "none";
+        }
+    }
+    </script>
+
+
+
+
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+
+
+
+
+
+
+<head>
+    <title>Resume Layout</title>
+
+
+
+
+
+
+
+
+    <style>
+        #header {
+            height: 125px;
+            background-color: #e1e1ec;
+            margin-bottom: 30px;
+            padding: 10px, 20px;
+            text-align: center;
+        }
+
+
+
+
+
+
+
+
+        #header h2 {
+            margin: 30px;
+        }
+
+
+
+
+        #header ul {
+            list-style-type: none;
+            /* removes bullets */
+            margin: 10px 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+
+
+
+
+
+
+
+        #header ul li {
+            background: #ffffff;
+            font-size: 12px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        #header ul li:hover {
+            background: #cfd3e6;
+        }
+        #centered {
+        text-align: center;
+        font-weight: bold;
+        text-decoration: underline;
+        }
+        .testibox {
+        display: inline-block;
+        vertical-align: top;
+        width: 45vw;
+        outline: 5px solid black;
+        text-align: center;
+        padding:10px;
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        }
+        #cornerit {
+        width: 300px;
+        height: 200px;
+        background-color: grey;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        }
+
+
+     
+        #footer {
+            clear: both;
+            background-color: #e1e1ec;
+            margin-top: 10px;
+            padding: 10px;
+            padding: 10;
+        }
+
+
+        #circleit {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border-radius: 50%;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        #footer h2 {
+            text-align: center;
+            clear: both;
+            padding: 0;
+        }
+    </style>
+</head>
+
+
+
+
+
+
+
+
+<body>
+
+
+    <!-- HEADER -->
+    <div id="header">
+        <h2>Radius Ministries</h2>
+        <hr>
+        <ul>
+            <li>Home</li>
+            <li>Radius</li>
+            <li>Testimonies</li>
+            <li>Missions</li>
+            <li>Gallery</li>
+            <li>fundraising</li>
+            <li>Prayer</li>
+            <li>To Do</li>
+        </ul>
+    </div>
+    <h4 id= "centered"> Testimonies are _____________________ Here you can read some of ours
+    </h4>
+
+
+    <div class="testibox">
+        <div id="cornerit"> an image of someone</div>
+        <div class="toggle-box">
+            <h3 onclick="toggleaText()"> Name - how many years in</h3>
+            <p id="hiddenaText">This is the story text.</p>
+        </div>
+    </div>
+    <div class="testibox">
+        <div id="cornerit"> an image of someone</div>
+        <div class="toggle-box">
+            <h3 onclick="togglebText()"> Name - how many years in</h3>
+            <p id="hiddenbText">This is the story text.</p>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <div id="footer">
+        <div id="circleit"></div>
+    </div>
+    <script>
+        function toggleaText() {
+              const atext = document.getElementById("hiddenaText");
+       
+              if (atext.style.display === "none") {
+                atext.style.display = "block";
+              } else {
+                atext.style.display = "none";
+              }
+            }
+   
+   
+            function togglebText() {
+            const btext = document.getElementById("hiddenbText");
+           
+            if (btext.style.display === "none") {
+                btext.style.display = "block";
+            } else {
+                btext.style.display = "none";
+            }
+        }
+    </script>
+
+
+
+
+</body>
+</html>
