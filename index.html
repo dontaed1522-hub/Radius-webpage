@@ -46,10 +46,21 @@
 
 
         #sechead {
-        clear: both;
-        margin: 20px;
-        display: flex;
-        align-items: center;
+        position: relative;
+        text-align: center;
+        }
+        #sechead img {
+        width: 100%;
+        height: auto;
+        display: block;
+        }
+        #sechead-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-shadow: 2px 2px 5px black;
         }
         #sechead h3 {
         padding: 20px;
@@ -133,10 +144,12 @@
 
 
     <div id="sechead">
-        <img src="imgs/lftradlogo.png" alt="banner right" width= "1300">
-        <h3> "Cross Hearts Communities Nations"<br
-        </h3>
-        <p> Enter more in depth explaination of quote here</p>
+        <img src="imgs/lftradlogo.png" alt="banner right" width="1300">
+
+        <div id="sechead-text">
+            <h3>"Cross Hearts Communities Nations"</h3>
+            <p>Enter more in depth explanation of quote here</p>
+        </div>
     </div>
 
 
